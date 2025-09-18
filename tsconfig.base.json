@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@task-manager/auth": ["auth/src/index.ts"],
+      "@task-manager/data-access": ["data-access/src/index.ts"],
+      "@task-manager/types": ["types/src/index.ts"],
+      "@task-manager/ui": ["ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
