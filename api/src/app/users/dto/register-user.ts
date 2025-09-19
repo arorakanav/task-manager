@@ -1,4 +1,5 @@
 import { IsEmail, IsString, MinLength, IsEnum } from 'class-validator';
+import { Role } from '../enums';
 
 export class RegisterDto {
   @IsEmail()
@@ -11,6 +12,6 @@ export class RegisterDto {
   @IsString()
   name: string;
 
-  @IsEnum(['admin', 'manager', 'contributor'])
-  role: 'admin' | 'manager' | 'contributor';
+  @IsEnum(Role)
+  role: Role;
 }

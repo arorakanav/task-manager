@@ -1,5 +1,6 @@
 import { IsString, IsOptional, IsDateString, IsEnum, IsInt } from 'class-validator';
 import { User } from '../../users/entities';
+import { Status } from '../enums';
 
 export class CreateTaskDto {
   @IsString()
@@ -9,8 +10,8 @@ export class CreateTaskDto {
   @IsString()
   description?: string;
 
-  @IsEnum(['todo', 'in_progress', 'done'])
-  status: 'todo' | 'in_progress' | 'done';
+  @IsEnum(Status)
+  status: Status;
 
   @IsOptional()
   @IsDateString()
@@ -23,6 +24,8 @@ export class CreateTaskDto {
   @IsInt()
   projectId: number;
 
-  @IsInt()
-  assigneeId: number;
+  @IsString()
+  assigneeId: string;
+
+  assignee?: User;
 }
