@@ -8,9 +8,10 @@ class AuthController {
   }
 
   @Post('login')
-  login(@Body() body) {
+  login(req, res) {
     // Implement login logic here
-    return { message: 'Login endpoint', body };
+    const body = req.body;
+    return res.json({ message: 'Login endpoint', body });
   }
 }
 
