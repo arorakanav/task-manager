@@ -1,5 +1,5 @@
 import { IsString, IsOptional, IsDateString, IsEnum, IsInt } from 'class-validator';
-import { User } from '../../users/entities';
+import { User } from '../../user/entities';
 import { Status } from '../enums';
 
 export class CreateTaskDto {

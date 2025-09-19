@@ -1,7 +1,11 @@
 
 import { Entity, Column, CreateDateColumn, UpdateDateColumn, ManyToOne, PrimaryColumn } from 'typeorm';
-import { User } from '../../users/entities';
-import { Status } from '../enums';
+import { User } from './';
+import { Status } from '../task/enums';
+
+
+
+
 
 @Entity('tasks')
 export default class Task {

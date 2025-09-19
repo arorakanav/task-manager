@@ -1,10 +1,9 @@
 import { ForbiddenException, Injectable } from "@nestjs/common";
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Task } from "../tasks/entities";
-import { User } from "../users/entities";
 import { CreateTaskDto } from "./dto/create-task.dto";
 import { UpdateTaskDto } from "./dto/update-task.dto";
+import { Task, User } from "../entities";
 
 @Injectable()
 export class TaskService {
